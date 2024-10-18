@@ -1,7 +1,7 @@
 # Created by the script cgal_create_CMakeLists
 # This is the CMake script for compiling a set of CGAL applications.
 
-cmake_minimum_required(VERSION 3.1...3.23)
+cmake_minimum_required(VERSION 3.12...3.29)
 project(Polygon_mesh_processing_Tests)
 
 # CGAL and its components
@@ -66,6 +66,7 @@ create_single_source_cgal_program("test_pmp_polyhedral_envelope.cpp")
 create_single_source_cgal_program("test_pmp_np_function.cpp")
 create_single_source_cgal_program("test_degenerate_pmp_clip_split_corefine.cpp")
 create_single_source_cgal_program("test_isolevel_refinement.cpp")
+create_single_source_cgal_program("test_corefinement_nm_bo.cpp")
 #  create_single_source_cgal_program("test_pmp_repair_self_intersections.cpp")
 
 find_package(Eigen3 3.2.0 QUIET) #(requires 3.2.0 or greater)
@@ -87,6 +88,10 @@ if(TARGET CGAL::Eigen3_support)
   target_link_libraries(test_decimation_of_planar_patches PUBLIC CGAL::Eigen3_support)
   create_single_source_cgal_program("remeshing_quality_test.cpp" )
   target_link_libraries(remeshing_quality_test PUBLIC CGAL::Eigen3_support)
+  create_single_source_cgal_program("test_Bsurf.cpp")
+  target_link_libraries(test_Bsurf PUBLIC CGAL::Eigen3_support)
+  create_single_source_cgal_program("test_Bsurf_grid.cpp")
+  target_link_libraries(test_Bsurf_grid PUBLIC CGAL::Eigen3_support)
 else()
   message(STATUS "NOTICE: Tests that use the Eigen library will not be compiled.")
 endif()
