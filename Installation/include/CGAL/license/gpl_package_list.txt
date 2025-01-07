@@ -26,6 +26,7 @@ Inscribed_areas Inscribed Areas
 Interpolation 2D and Surface Function Interpolation
 Interval_skip_list Interval Skip List
 Jet_fitting_3 Estimation of Local Differential Properties of Point-Sampled Surfaces
+Kinetic_surface_reconstruction Kinetic Surface Reconstruction
 Matrix_search Monotone and Sorted Matrix Search
 Mesh_2 2D Conforming Triangulations and Meshes
 Mesh_3 3D Mesh Generation
@@ -105,5 +106,6 @@ Triangulation_2 2D Triangulation
 Triangulation_3 3D Triangulations
 Triangulation dD Triangulations
 Triangulation_on_sphere_2 2D Triangulation on Sphere
+Vector_graphics_on_surfaces
 Visibility_2 2D Visibility Computation
 Voronoi_diagram_2 2D Voronoi Diagram Adaptor
